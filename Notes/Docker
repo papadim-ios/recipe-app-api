@@ -10,3 +10,9 @@ docker-compose build
 - Create Django project:
 docker-compose run [service_name] sh -c "django-admin.py startproject app ."
 e.g. docker-compose run app sh -c "django-admin.py startproject app ."
+
+- Create Core App:
+docker-compose run app sh -c "python manage.py startapp core"
+
+- Migrations:
+docker-compose run app sh -c "python manage.py makemigrations core"
